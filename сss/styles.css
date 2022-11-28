@@ -622,8 +622,10 @@ li {
   background-color: transparent;
   cursor: pointer;
 }
-.modal-close:focus{
+.modal-close:focus,
+.modal-close:hover{
   fill: var(--accent-text-color);
+  
 }
 .is-hidden {
   opacity: 0;
@@ -642,9 +644,10 @@ color: var(--basic-text-color);
   width: 100%;
   max-width: 448px;
   height: 40px;
+  font-size: 12px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  padding-left: 30px;
+  padding-left: 42px;
   outline: transparent;
   transition-property: border;
   transition-duration: 250ms;
@@ -661,6 +664,7 @@ color: var(--basic-text-color);
   display: flex;
   margin: auto;
 padding: 10px 52px;
+cursor: pointer;
   background-color: var(--bcg-focus-button);
   border: 1px solid var(--bcg-focus-button);
   border-radius: 4px;
@@ -686,6 +690,7 @@ color: var(--light-color);
   margin-bottom: 10px;
 }
 .input-label{
+  margin-bottom: 4px;
 font-weight: 400;
 font-size: 12px;
 line-height: 14px;
@@ -700,6 +705,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 border-radius: 4px;
 background-color: var(--bcg-color);
 padding: 15px 16px ;
+color: var(--light-color);
 }
 .footer-button{
   display: flex;
@@ -707,6 +713,7 @@ padding: 15px 16px ;
 align-items: center;
 text-align: center;
 padding: 10px 28px;
+cursor: pointer;
   background-color: var(--bcg-focus-button);
   border: 1px solid var(--bcg-focus-button);
   border-radius: 4px;
@@ -722,12 +729,12 @@ color: var(--light-color);
   gap: 12px;
 }
 .subscription{
-  margin-left: 93px;
-}
+margin-left: auto;}
 .modal-comment{
   width: 100%;
   max-width: 448px;
   height: 120px;
+  font-size: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
@@ -781,7 +788,7 @@ color: var(--secondary-text-color);
 .label-checkbox span{
   width: 16px;
   height: 15px;
-  border: 1px solid var(--secondary-text-color);
+  border: 2px solid var(--basic-text-color);
   border-radius: 2px;
   margin-right: 7px;
   display: flex;
@@ -789,11 +796,27 @@ color: var(--secondary-text-color);
   justify-content: center;
   
 }
+.label-checkbox span:hover,
+.label-checkbox span:focus{
+  border: 2px solid var(--accent-text-color);
+}
+.label-checkbox:focus{
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+  0px 1px 1px rgba(0, 0, 0, 0.14), 
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+}
 
 
 .modal-check:checked + .label-checkbox span{
   background-color: var(--accent-text-color);
   border: none;
 }
-
+.footer-button:hover,
+.footer-button:focus {
+  background-color: var(--bcg-focus-button);
+}
+.modal-button:hover,
+.modal-button:focus {
+  background-color: var(--bcg-focus-button);
+}
 
